@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hey There</title>
+    <style>
+        *{
+            margin: 0px;
+            box-sizing: border-box;
+            padding: 0px;
+        }
+        .main{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .emoji{
+            font-size: 10rem;
+            cursor: pointer;
+            user-select: none;
+        }
+        .open{
+            display: none;
+        }
+        .closed{
+            display: none;
+        }
+        .active{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main">
+        <div class="emoji closed active">🙈</div>
+        <div class="emoji open">🐵</div>
+
+    </div>
+
+    <script>
+        const closedface = document.querySelector('.closed');
+        const openface = document.querySelector('.open');
+
+        //addnign eventlistener
+
+        closedface.addEventListener('click',() =>{
+            if(openface.classList.contains('open')){
+                openface.classList.add('active');
+                closedface.classList.remove('active');
+            }
+        })
+
+        openface.addEventListener('click', () =>{
+            if(closedface.classList.contains('closed')){
+                closedface.classList.add('active');
+                openface.classList.remove('active');
+            }
+        })
+    </script>
+    
+</body>
+</html>
