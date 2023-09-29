@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEME GENERATOR</title>
+</head>
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+    body{
+        background-color: bisque;
+    }
+    .main{
+        display: flex;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    #button{
+        padding: 10px;
+        margin: 10px;
+        color: black;
+        border-radius: 10px;
+        cursor: pointer;
+        user-select: none;
+    }
+    .image{
+        margin: 10px;
+        height: 500px;
+        width: 500px;
+    }
+    .author{
+        margin: 10px;
+    }
+
+
+</style>
+<body>
+    
+    <div class="main">
+    <button id="button">Generate Meme</button>
+    <h2 class="title">Loading...</h2>
+    <img src="" alt="" class="image">
+
+    <div class="author"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
